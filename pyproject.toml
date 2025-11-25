@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "test-framework-cli"
+version = "0.1.0"
+description = "A test framework CLI tool using LangChain, LangGraph, and Playwright"
+requires-python = ">=3.9"
+dependencies = [
+    "langchain>=0.1.0",
+    "langgraph>=0.0.40",
+    "playwright>=1.40.0",
+    "python-dotenv>=1.0.0",
+    "click>=8.1.0",
+]
+
+[project.scripts]
+test-cli = "test_framework.cli:main"
